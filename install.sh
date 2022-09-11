@@ -16,9 +16,12 @@
 
 if [ "$1" = "uninstall" ]; then
 	rm -rf /usr/share/lxqt/themes/sparky5
+	rm -rf /usr/share/lxqt/themes/sparky5-dark
 else
 	if [ ! -d /usr/share/lxqt/themes/sparky5 ]; then
 		mkdir -p /usr/share/lxqt/themes/sparky5
+		mkdir -p /usr/share/lxqt/themes/sparky5-dark
 	fi
 	cp sparky5/* /usr/share/lxqt/themes/sparky5/
+	cp sparky5-dark/* /usr/share/lxqt/themes/sparky5-dark/
 fi
